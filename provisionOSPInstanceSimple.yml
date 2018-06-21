@@ -5,9 +5,9 @@
   gather_facts: no
 
   tasks:
- - name: Debug
-   debug:
-     vars: hostvars[inventory_hostname]
+  - name: Debug
+    debug:
+      vars: hostvars[inventory_hostname]
   
   - name: Create a new instance and attaches to a network and passes metadata to the instance
     os_server:
