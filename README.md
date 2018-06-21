@@ -1,0 +1,1 @@
+# cf-osp-ansible-embedded
