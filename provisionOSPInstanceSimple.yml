@@ -20,7 +20,7 @@
       timeout: 200
       flavor: "{{ flavor }}"
       nics:
-        - net-id: "{{ net-id }}"
+        - net-id: "{{ net_id }}"
         - net-name: "{{ net-name }}"
       meta:
         hostname: "{{ hostname }}"
