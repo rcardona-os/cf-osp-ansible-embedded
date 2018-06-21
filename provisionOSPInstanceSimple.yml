@@ -1,19 +1,18 @@
 # Create a simple VM
 
 - name: Create a simple VM instance
-  hosts: localhost
-  connection: local
+  hosts: all
   gather_facts: no
 
   tasks:
   - name: Create a new instance and attaches to a network and passes metadata to the instance
     os_server:
       state: present
-      auth:
-        auth_url: "http://{{ auth_url }}:5000/v2.0"
-        username: "{{ username }}"
-        password: "{{ password }}"
-        project_name: "{{ project_name }}"
+      #auth:
+        #auth_url: "http://{{ auth_url }}:5000/v2.0"
+        #username: "{{ username }}"
+        #password: "{{ password }}"
+        #project_name: "{{ project_name }}"
       name: "{{ instance_name }}"
       image: "{{ image }}"
       #key_name: "{{ key_name }}"
