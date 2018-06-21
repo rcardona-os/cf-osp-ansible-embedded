@@ -9,11 +9,12 @@
   - name: Create a new instance and attaches to a network and passes metadata to the instance
     os_server:
       state: present
-      auth:
+      #auth:
          #auth_url: https://identity.example.com
          #username: admin
          #password: admin
-        project_name: admin
+        #project_name: admin
+      cloud: mycloud
       name: "{{ instance_name }}"
       image: "{{ image }}"
       key_name: "{{ key_name }}"
