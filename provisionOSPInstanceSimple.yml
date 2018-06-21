@@ -5,15 +5,19 @@
   gather_facts: no
 
   tasks:
+ - name: Debug
+   debug:
+     vars: hostvars[inventory_hostname]
+  
   - name: Create a new instance and attaches to a network and passes metadata to the instance
     os_server:
       state: present
-      #auth:
-        #auth_url: "http://{{ auth_url }}:5000/v2.0"
-        #username: "{{ username }}"
-        #password: "{{ password }}"
-        #project_name: "{{ project_name }}"
-      cloud: mycloud
+      auth:
+        auth_url: "http://{{ auth_url }}:5000/v2.0"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        project_name: "{{ project_name }}"
+      #cloud: mycloud
       name: "{{ instance_name }}"
       image: "{{ image }}"
       timeout: 200
@@ -22,3 +26,5 @@
         - net-id: "{{ net_id }}"
       meta:
         hostname: "{{ hostname }}"
+        
+
