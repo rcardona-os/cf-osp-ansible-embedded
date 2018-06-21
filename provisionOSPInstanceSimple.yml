@@ -13,9 +13,9 @@
         #username: "{{ username }}"
         #password: "{{ password }}"
         #project_name: "{{ project_name }}"
+      cloud: mycloud
       name: "{{ instance_name }}"
       image: "{{ image }}"
-      #key_name: "{{ key_name }}"
       timeout: 200
       flavor: "{{ flavor }}"
       nics:
