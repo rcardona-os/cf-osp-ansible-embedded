@@ -18,5 +18,5 @@
       state: present
       name: "{{ name }}"
       description: "{{ description }}"
-      domain_id: "{{ domain_id }}"
+      domain_id: default
       enabled: Yes
