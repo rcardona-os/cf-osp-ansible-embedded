@@ -19,4 +19,4 @@
       name: "{{ name }}"
       description: "{{ description }}"
       domain_id: "{{ domain_id }}"
-      enabled: True
+      enabled: Yes
