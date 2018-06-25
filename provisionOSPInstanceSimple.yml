@@ -20,6 +20,7 @@
       name: "{{ instance_name }}"
       image: "{{ image }}"
       timeout: 200
+      auto_ip: no
       flavor: "{{ flavor }}"
       nics:
         - net-id: "{{ net_id }}"
