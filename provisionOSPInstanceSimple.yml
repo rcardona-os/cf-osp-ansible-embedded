@@ -13,11 +13,10 @@
     os_server:
       state: present
       auth:
-        #auth_url: "http://{{ auth_url }}:5000/v2.0"
-        #username: "{{ username }}"
-        #password: "{{ password }}"
-        #project_name: "{{ project_name }}"
-      cloud: mycloud
+        auth_url: "http://{{ auth_url }}:5000/v2.0"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        project_name: "{{ project_name }}"
       name: "{{ instance_name }}"
       image: "{{ image }}"
       timeout: 200
