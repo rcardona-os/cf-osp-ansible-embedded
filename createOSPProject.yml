@@ -1,0 +1,22 @@
+# Create a simple VM
+
+- name: Create a simple VM instance
+  hosts: all
+  gather_facts: no
+
+  tasks:
+  - name: Debug
+    debug:
+      var: hostvars[inventory_hostname]
+
+  - os_project:
+      auth:
+        auth_url: "http://{{ auth_url }}:5000/v2.0"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        project_name: "{{ project_name }}"
+      state: present
+      name: "{{ name }}"
+      description: "{{ description }}"
+      domain_id: "{{ domain_id }}"
+      enabled: True
